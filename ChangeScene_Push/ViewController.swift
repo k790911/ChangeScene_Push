@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func goToRed(_ sender: UIButton) {
+        guard let redVC = storyboard?.instantiateViewController(withIdentifier: "redVC") else { return }
+        
+        self.navigationController?.pushViewController(redVC, animated: true)
+    }
+    
+    deinit {
+        print("ViewController gone")
+    }
+    
 }
 
